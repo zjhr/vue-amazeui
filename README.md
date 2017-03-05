@@ -5,8 +5,10 @@
 
 ## 安装 vue-amamzeui
 
+``` bash
+# 安装
 npm install vue-amamzeui
-
+```
 ## 项目dome运行
 
 ``` bash
