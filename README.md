@@ -1,9 +1,12 @@
 
-# vue-amamze
+# vue-amamzeui
 
 > vue amamze ui
+# 安装 vue-amamzeui
 
-## Build Setup
+npm install vue-amamzeui
+
+## 项目dome运行
 
 ``` bash
 # install dependencies
