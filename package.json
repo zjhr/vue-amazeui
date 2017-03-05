@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "vue amamze ui",
   "author": "zjhr",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
