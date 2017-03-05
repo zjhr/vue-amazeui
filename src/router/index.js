@@ -7,7 +7,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [{
-    path: '/vue-amazeui-demo',
+    path: '/',
     component: App,
     children: [{ //嵌套路由，在App渲染的router-view里面router-view再次渲染为以下views
       path: '', //推荐
