@@ -1,6 +1,6 @@
 <template>
   <container fill direction="column" transition @enter="enterFun">
-    <tabbar slot="tabbar" blue class="am-view-push" :style="{'transform':translate3d}">
+    <tabbar slot="tabbar" blue class="am-view-push" :style="{'transform':translate3d}" noActive>
       <tabbar-item href="/" icon="list" title="组件"></tabbar-item>
       <tabbar-item href="/About" badge="β" icon="info" title="关于"></tabbar-item>
     </tabbar>
