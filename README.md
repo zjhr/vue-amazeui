@@ -1,13 +1,13 @@
 
-# vue-amamzeui
+# vue-amazeui
 
-> vue amamze ui
+> vue amaze ui
 
-## 安装 vue-amamzeui
+## 安装 vue-amazeui
 
 ``` bash
 # 安装
-npm install vue-amamzeui
+npm install vue-amazeui
 ```
 ## 项目dome运行
 
