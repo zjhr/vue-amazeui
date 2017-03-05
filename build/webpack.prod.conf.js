@@ -6,17 +6,10 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var packageJson = require('../package.json')
 var env = config.build.env
-var banner =
-  '/*!\n' +
-  ' * vue-amazeui v' + packageJson.version + ' (https://github.com/zjhr/vue-amazeui)\n' +
-  ' * (c) ' + new Date().getFullYear() + ' zjhr \n' +
-  ' * Released under the MIT License.\n' +
-  ' */';
 var webpackConfig = merge(baseWebpackConfig, {
   entry: {
-    'vue-amazeui': './src/index.js'
+    'vue-amazeui': '../src/index.js'
   },
   module: {
     rules: utils.styleLoaders({
@@ -24,7 +17,6 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: true
     })
   },
-  banner: banner,
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
