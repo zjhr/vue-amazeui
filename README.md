@@ -2,7 +2,7 @@
 # vue-amamzeui
 
 > vue amamze ui
-# 安装 vue-amamzeui
+## 安装 vue-amamzeui
 
 npm install vue-amamzeui
 
