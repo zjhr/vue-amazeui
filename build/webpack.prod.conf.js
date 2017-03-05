@@ -8,9 +8,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var env = config.build.env
 var webpackConfig = merge(baseWebpackConfig, {
-  entry: {
-    'vue-amazeui': '../src/index.js'
-  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
