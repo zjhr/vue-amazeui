@@ -9,20 +9,19 @@
         name: 'slider-slides',
         data() {
             return {
-                startX: 0, startY: 0, endX: 0, endY: 0
+                startX: 0, endX: 0
             }
         },
         methods: {
             touchstartFun(event) {
                 const touch = event.touches[0];
-                this.startX = touch.pageX
-                this.startY = touch.pageY;
+                this.startX = touch.pageX;
+                this.endX = 0;
                 this.$emit('silderStart')
             },
             touchmoveFun(event) {
                 let touch = event.touches[0];
                 this.endX = (touch.pageX - this.startX);
-                this.endY = (this.startY - touch.pageY);
             },
             touchendFun(event) {
                 if (this.endX > 50) {//右
