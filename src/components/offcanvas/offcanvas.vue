@@ -1,5 +1,5 @@
 <template>
-    <div rel="offcanvas">
+    <span rel="offcanvas">
         <transition :name="offcanvasSilde" @enter="enter">
         <div v-show="open" class="offcanvas" :style="objectStyle">
             <slot></slot>
@@ -8,7 +8,7 @@
         <transition name="fade">
             <div v-show="open" class="modal-backdrop" @click="offcanvasClose" @touchmove.stop></div>
         </transition>  
-    </div>
+    </span>
 </template>
 
 <script>
@@ -60,6 +60,7 @@
         }
 
     }
+
 </script>
 
 <style scoped>

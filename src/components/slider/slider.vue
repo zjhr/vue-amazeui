@@ -42,7 +42,8 @@
                 items: [],
                 oneTap: false,
                 timeout: '',
-                playtime: 5000
+                playtime: 5000,
+                children: []
             }
         },
         mounted() {
@@ -64,7 +65,7 @@
                 }, playtime)
             },
             updateIndex() {
-                let children = this.$refs.sliderSlides.$children
+                let children = this.children = this.$refs.sliderSlides.$children
                 if (!children.length) return
                 let sum = 0;
                 for (let i = 0; i < children.length; i++) {
@@ -85,7 +86,7 @@
             sliderFun(slide, Next) {
                 if (this.oneTap) return
                 this.oneTap = true
-                let children = this.$refs.sliderSlides.$children
+                let children = this.children
                 const ItemActive = this.sliderItemActive
                 let ItemActiveNext;
                 if (Next === false && slide === 'left') {
