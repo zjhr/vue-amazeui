@@ -84,7 +84,7 @@
 
 <script>
   import Index from './index.js';
-  import Offcanvas from 'components/offCanvas';
+  import Offcanvas from 'components/offcanvas';
   export default {
     data() {
       return {
@@ -109,6 +109,5 @@
 </script>
 
 <style scoped>
-
 
 </style>

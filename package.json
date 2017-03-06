@@ -50,7 +50,7 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
-  "main": "index.js",
+  "main": "./dist/static/js/vue-amazeui.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zjhr/vue-amazeui.git"

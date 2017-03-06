@@ -28,8 +28,7 @@ module.exports = {
       'src': resolve('src'),
       'assets': resolve('src/assets'),
       'components': resolve('src/components'),
-      'views': resolve('src/views'),
-      'vue-amazeui': path.resolve(__dirname, 'src'),
+      'views': resolve('src/views')
     }
   },
   module: {

@@ -31,7 +31,7 @@
                 </group>
             </div>
         </vueview>
-        <offCanvas :open="offcanvas1" @Close="close('offcanvas1')">
+        <off-canvas :open="offcanvas1" @Close="close('offcanvas1')">
             <div>
                 <h3 class="margin">OffCanvas 内容</h3>
                 <list>
@@ -40,25 +40,25 @@
                     <list-item title="GitHub" href='github'></list-item>
                 </list>
             </div>
-        </offCanvas>
-        <offCanvas sildewh="80%" :open="offcanvas2" @Close="close('offcanvas2')">
+        </off-canvas>
+        <off-canvas sildewh="80%" :open="offcanvas2" @Close="close('offcanvas2')">
             <p>宽度80%OffCanvas 内容</p>
-        </offCanvas>
-        <offCanvas silde="right" :open="offcanvas3" @Close="close('offcanvas3')">
+        </off-canvas>
+        <off-canvas silde="right" :open="offcanvas3" @Close="close('offcanvas3')">
             <p>右侧边栏 OffCanvas 内容</p>
-        </offCanvas>
-        <offCanvas silde="bottom" :open="offcanvas4" @Close="close('offcanvas4')">
+        </off-canvas>
+        <off-canvas silde="bottom" :open="offcanvas4" @Close="close('offcanvas4')">
             <p>向下显示 OffCanvas 内容</p>
-        </offCanvas>
-        <offCanvas silde="top" :open="offcanvas5" @Close="close('offcanvas5')">
+        </off-canvas>
+        <off-canvas silde="top" :open="offcanvas5" @Close="close('offcanvas5')">
             <p>向上显示 OffCanvas 内容</p>
-        </offCanvas>
-        <offCanvas slot="offcanvas" :open="offcanvas6" @Close="close('offcanvas6','pLeft')">
+        </off-canvas>
+        <off-canvas slot="offcanvas" :open="offcanvas6" @Close="close('offcanvas6','pLeft')">
             <p>push 左侧显示 OffCanvass 内容</p>
-        </offCanvas>
-        <offCanvas slot="offcanvas" silde="right" sildewh="80%" :open="offcanvas7" @Close="close('offcanvas7','pRight')">
+        </off-canvas>
+        <off-canvas slot="offcanvas" silde="right" sildewh="80%" :open="offcanvas7" @Close="close('offcanvas7','pRight')">
             <p>push 右侧显示 宽度80% OffCanvass 内容</p>
-        </offCanvas>
+        </off-canvas>
     </vueview>
 </template>
 
@@ -66,7 +66,7 @@
     import Index from './index.js';
     import * as Button from 'components/button';
     import * as List from 'components/list';
-    import OffCanvas from 'components/offCanvas';
+    import OffCanvas from 'components/offcanvas';
     export default {
         data() {
             return {
@@ -123,6 +123,7 @@
         }
 
     }
+
 </script>
 
 <style scoped>
