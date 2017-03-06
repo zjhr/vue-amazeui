@@ -25,9 +25,9 @@
                 this.endY = (this.startY - touch.pageY);
             },
             touchendFun(event) {
-                if (this.endX > 100) {//右
+                if (this.endX > 50) {//右
                     this.$emit('silderRight')
-                } else if (this.endX < -100) {//左
+                } else if (this.endX < -50) {//左
                     this.$emit('silderLeft')
                 }
             }
