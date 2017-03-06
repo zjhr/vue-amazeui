@@ -2,10 +2,11 @@
     <transition>
         <div class="view" :style="pushStyle" :class="objectClass">
             <slot name="header"></slot>
-            <slot name="offcanvas"></slot>
-            <container v-if="$slots.default" fill scrollable>
+            <container v-if="$slots.default && !$slots.offcanvas" fill scrollable>
                 <slot></slot>
             </container>
+            <slot v-if="$slots.offcanvas"></slot>
+            <slot v-if="$slots.offcanvas" name="offcanvas"></slot>
         </div>
     </transition>
 </template>
