@@ -46,7 +46,7 @@ const components = {
   vueview
 }
 
-const install = function () {
+const install = function (Vue) {
   Object.keys(components).forEach((key) => {
     Vue.component(components[key].name, components[key])
   })
@@ -54,7 +54,7 @@ const install = function () {
 
 if (typeof window !== 'undefined' && window.Vue) install(window.Vue)
 
-module.exports = {
+export default {
   ...components,
   install
 }

@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: 'switch',
+        name: 'vue-switch',
         props: {
             value: Boolean,
             disabled: Boolean
