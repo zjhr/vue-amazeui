@@ -9,6 +9,13 @@
 # 安装
 npm install vue-amazeui
 ```
+## 使用
+``` bash
+import VueAmazeui from 'vue-amazeui'
+import 'vue-amazeui/dist/static/amazeui.touch.css'
+Vue.use(VueAmazeui)
+```
+
 ## 项目dome运行
 
 ``` bash
