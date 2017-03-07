@@ -2,6 +2,7 @@
 # vue-amazeui
 
 > vue amaze ui
+>组件组合了vue-router,所以必须安装vue-router
 
 ## 安装 vue-amazeui
 
