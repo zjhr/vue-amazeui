@@ -5,11 +5,8 @@
 </template>
 
 <script>
-export default {
-    name: 'tabs-body'
-}
+    export default {
+        name: 'tabs-body'
+    }
+
 </script>
-
-<style scoped>
-
-</style>

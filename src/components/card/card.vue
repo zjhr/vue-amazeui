@@ -1,7 +1,6 @@
 <template>
     <div class="card">
-        <div v-if="$slots.header || title" class="card-header"
-        :class="{'card-cover' : bg}" :style="img">
+        <div v-if="$slots.header || title" class="card-header" :class="{'card-cover' : bg}" :style="img">
             <h2 v-if="title" class="card-title">
                 {{title}}
             </h2>
@@ -30,8 +29,5 @@
         }
 
     }
+
 </script>
-
-<style scoped>
-
-</style>

@@ -59,9 +59,9 @@
                 clearTimeout(this.timeout)
             },
             autoPlayFun(playtime) {
-                this.silderStartFun()
                 this.timeout = setTimeout(() => {
                     this.rightNavFun({ autoPlay: playtime })
+                    this.silderStartFun()
                 }, playtime)
             },
             updateIndex() {
@@ -83,7 +83,7 @@
                     this.isThumbs = true
                 }
             },
-            sliderFun(slide, Next) {
+            sliderFun(slide, Next, autoPlay) {
                 if (this.oneTap) return
                 this.oneTap = true
                 let children = this.children
@@ -114,22 +114,21 @@
                 setTimeout(() => {
                     this.sliderItemActive = ItemActiveNext;
                     this.oneTap = false
-                }, 500)
+                    if (autoPlay) this.autoPlayFun(autoPlay)
+                }, 600)
 
             },
             leftNavFun({ index = false, autoPlay = false }) {
-                this.sliderFun('right', index)
-                if (autoPlay) this.autoPlayFun(autoPlay)
+                this.sliderFun('right', index, autoPlay)
             },
             rightNavFun({ index = false, autoPlay = false }) {
-                this.sliderFun('left', index)
-                if (autoPlay) this.autoPlayFun(autoPlay)
+                this.sliderFun('left', index, autoPlay)
             },
             pagerClickFun(index) {
                 if (index > this.sliderItemActive) {//右按钮
-                    this.rightNavFun({ index })
+                    this.rightNavFun({ index, autoPlay: this.playtime })
                 } else if (index < this.sliderItemActive) {//左按钮
-                    this.leftNavFun({ index })
+                    this.leftNavFun({ index, autoPlay: this.playtime })
                 }
             }
         },
@@ -149,7 +148,3 @@
     }
 
 </script>
-
-<style scoped>
-
-</style>

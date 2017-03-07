@@ -1,12 +1,12 @@
 <template>
-    <router-link :tag="href===''?'a':elm" :to="href===''|| !href? $route.path : href" 
-    :replace="replace" :class="navbarLinkClass" @click.native="handleClick">
+    <router-link :tag="href===''?'a':elm" :to="href===''|| !href? $route.path : href" :replace="replace" :class="navbarLinkClass"
+        @click.native="handleClick">
         <span v-if="$slots.default" :class="navbarTitle"><slot></slot></span>
         <span v-if="titleLeft" :class="navbarTitle" v-text="titleLeft"></span>
         <span v-if="name" class="icon" :class="[objectClass,iconClass]"></span>
         <slot name="badge"></slot>
         <span v-if="titleRight" :class="navbarTitle" v-text="titleRight"></span>
-    </router-link>
+        </router-link>
 </template>
 
 <script>
@@ -73,8 +73,5 @@
         }
 
     }
+
 </script>
-
-<style scoped>
-
-</style>

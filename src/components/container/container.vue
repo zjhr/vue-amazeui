@@ -24,7 +24,7 @@
       }
     },
     watch: {
-      '$route' (to, from) {
+      '$route'(to, from) {
         let toDepth = to.path.split('/')[1] == "" ? 1 : to.path.split('/').length
         let fromDepth = from.path.split('/').length
         if (toDepth === fromDepth) {
@@ -78,14 +78,14 @@
         class: {
           'container': true,
           'container-fill': this.fill, ['container-' + this.direction]: this.direction,
-            'container-scrollable': this.scrollable
+          'container-scrollable': this.scrollable
         }
       }, child1)
     }
   }
 
 </script>
-<style>
+<style scoped>
   /*元素插入后执行动画*/
   
   .slide-left-enter {
@@ -144,5 +144,4 @@
     transition: all 3s cubic-bezier(0.23, 1, 0.320, 1);
     opacity: 1
   }
-
 </style>

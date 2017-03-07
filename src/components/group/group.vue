@@ -23,8 +23,5 @@
             noPadded: Boolean //是否移除分组内容的 padding。
         }
     }
+
 </script>
-
-<style scoped>
-
-</style>

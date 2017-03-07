@@ -11,8 +11,5 @@
             inset: Boolean //是否含外边距
         }
     }
+
 </script>
-
-<style scoped>
-
-</style>

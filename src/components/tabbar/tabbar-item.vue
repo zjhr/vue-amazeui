@@ -60,8 +60,3 @@
   }
 
 </script>
-
-<style scoped>
-
-
-</style>

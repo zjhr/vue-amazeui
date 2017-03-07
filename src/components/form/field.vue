@@ -14,8 +14,5 @@
             check: Boolean
         }
     }
+
 </script>
-
-<style scoped>
-
-</style>

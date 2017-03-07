@@ -1,7 +1,7 @@
 <template>
     <div :class="objectClass">
         <!--组建输入框组时输入框前面的按钮。-->
-        <slot v-if="!set" name="btnBefore"></slot> 
+        <slot v-if="!set" name="btnBefore"></slot>
         <span v-if="!set && !$slots.btnBefore" class="field-group-label">
             {{labelBefore}}
             <slot name="left"></slot>
@@ -34,8 +34,5 @@
         }
 
     }
+
 </script>
-
-<style scoped>
-
-</style>
