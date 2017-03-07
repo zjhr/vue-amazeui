@@ -1,6 +1,6 @@
 <template>
     <transition :name="slider" @after-enter="enterAfter" @after-leave="leaveAfterFun">
-        <li v-show="activeItem" :class="objectClass">
+        <li v-show="activeItem" :class="objectClass" :key="currentIndex">
             <slot></slot>
             <div v-if="title" class="slider-caption" v-text="title"></div>
         </li>
@@ -20,11 +20,12 @@
         data() {
             return {
                 activeItem: false,
-                slide: ''
+                slide: '',
+                currentIndex: 0
             }
         },
         methods: {
-            enterAfter() {
+            enterAfter(el) {
                 this.$emit('onAction', this.currentIndex, this.slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
             },
             leaveAfterFun(el) {
