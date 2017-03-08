@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: 'tabs-item',
+        name: 'tabs-desc',
         data() {
             return {
                 activeItem: false

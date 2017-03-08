@@ -14,43 +14,57 @@
         </select>
         <textarea v-else-if="type==='textarea'" :name="name" class="field" :placeholder="placeholder" :value="value" :autofocus="autofocus"
             v-model="currentValue" @change="handleChange" :disabled="disabled" :maxlength="maxlength" @focus="focusHandler" @blur="blur"></textarea>
+
             <input v-else-if="type==='text'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                 :value="value" :autofocus="autofocus" :maxlength="maxlength" :disabled="disabled" type="text" @focus="focusHandler"
                 @blur="blur">
+
                 <input v-else-if="type==='date'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                     :value="value" :autofocus="autofocus" :disabled="disabled" type="date" @focus="focusHandler" @blur="blur">
+
                     <input v-else-if="type==='datetime-local'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field"
                         :placeholder="placeholder" :value="value" :autofocus="autofocus" :disabled="disabled" type="datetime-local"
                         @focus="focusHandler" @blur="blur">
+
                         <input v-else-if="type==='datetime'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                             :value="value" :autofocus="autofocus" :disabled="disabled" type="datetime" @focus="focusHandler"
                             @blur="blur">
+
                             <input v-else-if="type==='month'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                 :value="value" :autofocus="autofocus" :disabled="disabled" type="month" @focus="focusHandler"
                                 @blur="blur">
+
                                 <input v-else-if="type==='week'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                     :value="value" :autofocus="autofocus" :disabled="disabled" type="week" @focus="focusHandler"
                                     @blur="blur">
+
                                     <input v-else-if="type==='time'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                         :value="value" :autofocus="autofocus" :disabled="disabled" type="time" @focus="focusHandler"
                                         @blur="blur">
+
                                         <input v-else-if="type==='email'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                             :value="value" :autofocus="autofocus" :maxlength="maxlength" :disabled="disabled"
                                             type="email" @focus="focusHandler" @blur="blur">
+
                                             <input v-else-if="type==='password'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                                 :value="value" :autofocus="autofocus" :maxlength="maxlength" :disabled="disabled"
                                                 type="password" @focus="focusHandler" @blur="blur">
+
                                                 <input v-else-if="type==='search'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                                     :value="value" :autofocus="autofocus" :maxlength="maxlength" :disabled="disabled"
                                                     type="search" @focus="focusHandler" @blur="blur">
+
                                                     <input v-else-if="type==='tel'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                                         :value="value" :autofocus="autofocus" :maxlength="maxlength" :disabled="disabled"
                                                         type="tel" @focus="focusHandler" @blur="blur">
+
                                                         <input v-else-if="type==='url'" :name="name" v-model.trim="currentValue" @change="handleChange" class="field" :placeholder="placeholder"
                                                             :value="value" :autofocus="autofocus" :maxlength="maxlength" :disabled="disabled"
                                                             type="url" @focus="focusHandler" @blur="blur">
+
                                                             <input v-else-if="type==='checkbox'" :name="name" v-model="currentValue" @change="handleChange" class="field" :value="!!value"
                                                                 :disabled="disabled" type="checkbox">
+
                                                                 <input v-else-if="type==='radio'" :name="name" v-model="currentValue" @change="handleChange" class="field" :value="!!value"
                                                                     :disabled="disabled" type="radio">
 </template>

@@ -14,7 +14,7 @@
 <script>
     import Container from '../container';
     export default {
-        name: 'vueview',
+        name: 'vue-view',
         props: { //配备offcanvas使用push滑动
             pLeft: { //push形式左侧滑
                 type: Boolean,

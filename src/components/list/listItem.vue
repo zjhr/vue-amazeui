@@ -18,7 +18,7 @@
     import itemContent from './itemContent.js';
     import Icon from '../icon';
     export default {
-        name: 'listitem',
+        name: 'list-item',
         props: {
             role: Boolean, //(item,header)子项角色，默认为 item
             title: String, //列表主标题
