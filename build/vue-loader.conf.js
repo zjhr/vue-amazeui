@@ -4,14 +4,14 @@ var isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   loaders: utils.cssLoaders({
-    sourceMap: isProduction
-      ? config.build.productionSourceMap
-      : config.dev.cssSourceMap,
+    sourceMap: isProduction ?
+      config.build.productionSourceMap :
+      config.dev.cssSourceMap,
     extract: isProduction
   }),
   postcss: [
     require('autoprefixer')({
-      browsers: ['last 2 versions']
+      browsers: ['ie > 9', 'chrome > 24', 'android >= 4.2', 'ios >= 7', 'safari >= 8', 'last 10 versions']
     })
   ]
 }
