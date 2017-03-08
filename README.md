@@ -13,7 +13,7 @@ npm install vue-amazeui
 ## 使用
 ``` bash
 import VueAmazeui from 'vue-amazeui'
-import 'vue-amazeui/dist/static/amazeui.touch.css'
+import 'vue-amazeui/dist/static/css/vue-amazeui.css'
 Vue.use(VueAmazeui)
 ```
 
