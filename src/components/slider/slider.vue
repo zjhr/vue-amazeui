@@ -20,7 +20,7 @@
     import sliderSlides from './sliderSlides'
     import Icon from '../icon';
     export default {
-        name: 'silder',
+        name: 'slider',
         props: {
             noControls: Boolean,//是否显示「上、下翻页」按钮，默认为 true
             noPager: Boolean,//是否显示「分页圆点」按钮，默认为 true。
@@ -52,6 +52,28 @@
                 const playtime = this.interval < 500 ? 500 : this.interval
                 this.playtime = playtime
                 this.autoPlayFun(playtime)
+                let hidden;
+                let visibilityChange;
+                if (typeof document.hidden !== "undefined") {
+                    hidden = "hidden";
+                    visibilityChange = "visibilitychange";
+                } else if (typeof document.mozHidden !== "undefined") {
+                    hidden = "mozHidden";
+                    visibilityChange = "mozvisibilitychange";
+                } else if (typeof document.msHidden !== "undefined") {
+                    hidden = "msHidden";
+                    visibilityChange = "msvisibilitychange";
+                } else if (typeof document.webkitHidden !== "undefined") {
+                    hidden = "webkitHidden";
+                    visibilityChange = "webkitvisibilitychange";
+                }
+                document.addEventListener(visibilityChange, () => {
+                    if (document[hidden]) {
+                        this.silderStartFun()
+                    } else {
+                        this.autoPlayFun(playtime)
+                    }
+                })
             }
         },
         methods: {
@@ -60,8 +82,8 @@
             },
             autoPlayFun(playtime) {
                 this.timeout = setTimeout(() => {
-                    this.rightNavFun({ autoPlay: playtime })
                     this.silderStartFun()
+                    this.rightNavFun({ autoPlay: playtime })
                 }, playtime)
             },
             updateIndex() {
