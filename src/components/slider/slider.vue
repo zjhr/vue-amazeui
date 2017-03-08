@@ -52,28 +52,6 @@
                 const playtime = this.interval < 500 ? 500 : this.interval
                 this.playtime = playtime
                 this.autoPlayFun(playtime)
-                let hidden;
-                let visibilityChange;
-                if (typeof document.hidden !== "undefined") {
-                    hidden = "hidden";
-                    visibilityChange = "visibilitychange";
-                } else if (typeof document.mozHidden !== "undefined") {
-                    hidden = "mozHidden";
-                    visibilityChange = "mozvisibilitychange";
-                } else if (typeof document.msHidden !== "undefined") {
-                    hidden = "msHidden";
-                    visibilityChange = "msvisibilitychange";
-                } else if (typeof document.webkitHidden !== "undefined") {
-                    hidden = "webkitHidden";
-                    visibilityChange = "webkitvisibilitychange";
-                }
-                document.addEventListener(visibilityChange, () => {
-                    if (document[hidden]) {
-                        this.silderStartFun()
-                    } else {
-                        this.autoPlayFun(playtime)
-                    }
-                })
             }
         },
         methods: {
@@ -126,18 +104,20 @@
                 } else {
                     ItemActiveNext = Next
                 }
-                children[ItemActive].activeItem = false
-                children[ItemActiveNext].activeItem = true
                 children[ItemActive].slide = children[ItemActiveNext].slide = slide
+                children[ItemActive].leave = true
+                children[ItemActiveNext].enter = true
+                children[ItemActiveNext].activeItem = true
                 if (!this.noPager) {
                     this.items[ItemActive].active = false
                     this.items[ItemActiveNext].active = true
                 }
                 setTimeout(() => {
+                    children[ItemActive].activeItem = false
                     this.sliderItemActive = ItemActiveNext;
                     this.oneTap = false
                     if (autoPlay) this.autoPlayFun(autoPlay)
-                }, 600)
+                }, 500)
 
             },
             leftNavFun({ index = false, autoPlay = false }) {

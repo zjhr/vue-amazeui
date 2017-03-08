@@ -1,10 +1,8 @@
 <template>
-    <transition :name="slider" @after-enter="enterAfter" @after-leave="leaveAfterFun">
-        <li v-show="activeItem" :class="objectClass" :key="currentIndex">
-            <slot></slot>
-            <div v-if="title" class="slider-caption" v-text="title"></div>
-        </li>
-    </transition>
+    <li :class="objectClass" :key="currentIndex">
+        <slot></slot>
+        <div v-if="title" class="slider-caption" v-text="title"></div>
+    </li>
 </template>
 
 <script>
@@ -21,25 +19,42 @@
             return {
                 activeItem: false,
                 slide: '',
-                currentIndex: 0
+                currentIndex: 0,
+                enter: false,
+                leave: false
             }
         },
         methods: {
-            enterAfter(el) {
-                this.$emit('onAction', this.currentIndex, this.slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
+            enterAfterFun() {
+                this.$emit('enterAfter', this.currentIndex, this.slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
             },
-            leaveAfterFun(el) {
-                this.$emit('onAction', this.currentIndex, this.slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
+            leaveAfterFun() {
+                this.$emit('leaveAfter', this.currentIndex, this.slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
             }
         },
         computed: {
             objectClass() {
                 return {
-                    'active': this.activeItem
+                    'active': this.activeItem,
+                    [`slider-${this.slide}-enter`]: this.enter,
+                    [`slider-${this.slide}-leave`]: this.leave
                 }
+            }
+        },
+        watch: {
+            enter(val, oldval) {
+                if (!val) return
+                setTimeout(() => {
+                    this.enterAfterFun()
+                    this.enter = false
+                }, 500)
             },
-            slider() {
-                return `slider-${this.slide}`
+            leave(val, oldval) {
+                if (!val) return
+                setTimeout(() => {
+                    this.leaveAfterFun()
+                    this.leave = false
+                }, 500)
             }
         }
     }
@@ -47,33 +62,63 @@
 </script>
 
 <style scoped>
-    .slider-slides>li {
-        display: block;
-        white-space: nowrap;
+    .slider-left-enter {
+        animation: sliderleftenter .5s ease forwards
     }
     
-    .slider-slides>li.active.slider-left-enter,
-    .slider-right-leave-to {
-        transform: translate3d(100%, 0, 0)
+    .slider-left-leave {
+        animation: sliderleftleave .5s ease forwards
     }
     
-    .slider-slides>li.active.slider-left-enter-active.slider-left-enter-to,
-    .slider-left-leave,
-    .slider-slides>li.active.slider-right-enter-active.slider-right-enter-to,
+    .slider-right-enter {
+        animation: sliderrightenter .5s ease forwards
+    }
+    
     .slider-right-leave {
-        transform: translate3d(0, 0, 0)
+        animation: sliderrightleave .5s ease forwards
     }
     
-    .slider-left-leave,
-    .slider-left-leave-to,
-    .slider-right-leave,
-    .slider-right-leave-to {
-        position: absolute;
-        top: 0;
+    @keyframes sliderrightleave {
+        0% {
+            transform: translate3d(0, 0, 0)
+        }
+        100% {
+            position: absolute;
+            top: 0;
+            transform: translate3d(100%, 0, 0)
+        }
     }
     
-    .slider-slides>li.active.slider-right-enter,
-    .slider-left-leave-to {
-        transform: translate3d(-100%, 0, 0)
+    @keyframes sliderrightenter {
+        0% {
+            position: absolute;
+            top: 0;
+            transform: translate3d(-100%, 0, 0)
+        }
+        100% {
+            transform: translate3d(0, 0, 0)
+        }
+    }
+    
+    @keyframes sliderleftenter {
+        0% {
+            position: absolute;
+            top: 0;
+            transform: translate3d(100%, 0, 0)
+        }
+        100% {
+            transform: translate3d(0, 0, 0)
+        }
+    }
+    
+    @keyframes sliderleftleave {
+        0% {
+            transform: translate3d(0, 0, 0)
+        }
+        100% {
+            position: absolute;
+            top: 0;
+            transform: translate3d(-100%, 0, 0)
+        }
     }
 </style>
