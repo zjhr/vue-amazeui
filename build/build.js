@@ -10,6 +10,7 @@ var shell = require('shelljs')
 var webpack = require('webpack')
 var config = require('../config')
 var webpackConfig = require('./webpack.prod.conf')
+// var webpackConfig = require('./webpack.amazeui.conf')
 
 var spinner = ora('building for production...')
 spinner.start()

@@ -38,5 +38,4 @@
   .am-view-push {
     transition: transform .5s cubic-bezier(0.23, 1, 0.320, 1);
   }
-
 </style>
