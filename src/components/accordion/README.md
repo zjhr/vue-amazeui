@@ -16,6 +16,22 @@
 >type : Boolean
 >>是否关闭动画
 
+#accordionItem
+---
+>风琴式菜单子类
+
+#prop
+
+##title
+>type : String
+>>手风琴标题
+
+##active
+>type : Boolean
+>>是否展开当前的手风琴
+
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Accordion.vue</a>
 
+#演示
+><a>https://zjhr.github.io/vue-amazeui-demo/#/Accordion</a>
