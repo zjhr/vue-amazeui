@@ -24,14 +24,6 @@
                 leave: false
             }
         },
-        methods: {
-            enterAfterFun() {
-                this.$emit('enterAfter', this.currentIndex, this.slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
-            },
-            leaveAfterFun() {
-                this.$emit('leaveAfter', this.currentIndex, this.slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
-            }
-        },
         computed: {
             objectClass() {
                 return {
@@ -45,14 +37,14 @@
             enter(val, oldval) {
                 if (!val) return
                 setTimeout(() => {
-                    this.enterAfterFun()
+                    this.$parent.$parent.enterAfterFun(this.currentIndex, this.slide)
                     this.enter = false
                 }, 500)
             },
             leave(val, oldval) {
                 if (!val) return
                 setTimeout(() => {
-                    this.leaveAfterFun()
+                    this.$parent.$parent.leaveAfterFun(this.currentIndex, this.slide)
                     this.leave = false
                 }, 500)
             }

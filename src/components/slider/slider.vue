@@ -22,18 +22,18 @@
     export default {
         name: 'slider',
         props: {
-            noControls: Boolean,//是否显示「上、下翻页」按钮，默认为 true
-            noPager: Boolean,//是否显示「分页圆点」按钮，默认为 true。
+            noControls: Boolean,//不显示「上、下翻页」按钮
+            noPager: Boolean,//不显示「分页圆点」按钮 
             interval: {
                 type: [String, Number],
                 default: 5000
-            },//轮播间隔时间最小500，默认为 5000（ms）。
-            noAutoPlay: Boolean,//是否自动播放，默认为 true。
-            noLoop: Boolean,//是否循环播放，默认为 true。
+            },//轮播间隔时间最小1000，默认为 5000（ms）。
+            noAutoPlay: Boolean,//关闭自动播放
+            noLoop: Boolean,//关闭循环播放。
             defaultActiveIndex: {
                 type: [String, Number],
                 default: 0
-            },//默认激活的幻灯片编号。
+            },//默认激活的幻灯片下标。
         },
         data() {
             return {
@@ -49,12 +49,18 @@
         mounted() {
             this.updateIndex()
             if (!this.noAutoPlay) {
-                const playtime = this.interval < 500 ? 500 : this.interval
+                const playtime = this.interval < 1000 ? 1000 : this.interval * 1
                 this.playtime = playtime
                 this.autoPlayFun(playtime)
             }
         },
         methods: {
+            enterAfterFun(currentIndex, slide) {
+                this.$emit('enterAfter', currentIndex, slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
+            },
+            leaveAfterFun(currentIndex, slide) {
+                this.$emit('leaveAfter', currentIndex, slide)//幻灯片切换后的回调函数，第一个参数幻灯片编号，第二个参数为滚动方向。
+            },
             silderStartFun() {
                 clearTimeout(this.timeout)
             },
