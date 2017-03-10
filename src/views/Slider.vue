@@ -5,7 +5,7 @@
             <icon name="left-nav" slot="left" titleRight="返回" back></icon>
         </navbar>
         <group header="默认" noPadded>
-            <slider>
+            <slider @enterAfter="enterAfterFun" @leaveAfter="leaveAfterFun">
                 <slider-item>
                     <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg">
                 </slider-item>
@@ -59,6 +59,14 @@
     import Index from './index.js';
     import * as Slider from 'components/slider';
     export default {
+        methods: {
+            enterAfterFun(currentIndex, slide) {
+                console.log(`进入下标：${currentIndex},方向：${slide}`)
+            },
+            leaveAfterFun(currentIndex, slide) {
+                console.log(`离开下标：${currentIndex},方向：${slide}`)
+            }
+        },
         components: {
             ...Index,
             ...Slider
