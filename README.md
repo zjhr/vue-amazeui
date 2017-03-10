@@ -17,6 +17,10 @@ import 'vue-amazeui/dist/static/css/vue-amazeui.css'
 Vue.use(VueAmazeui)
 ```
 
+##组件文档
+><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/accordion">accordion</a>
+
+
 ## 项目dome运行
 
 ``` bash
