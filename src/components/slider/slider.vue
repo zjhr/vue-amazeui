@@ -127,6 +127,7 @@
                 this.sliderFun('left', index, autoPlay)
             },
             pagerClickFun(index) {
+                this.silderStartFun()
                 if (index > this.sliderItemActive) {//右按钮
                     this.rightNavFun({ index, autoPlay: this.playtime })
                 } else if (index < this.sliderItemActive) {//左按钮
