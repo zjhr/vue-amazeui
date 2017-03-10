@@ -101,7 +101,7 @@
             value: {
                 type: [String, Boolean],
                 default: ''
-            }, //默认值,//radio,checkbox是否选中为Boolean
+            }, //默认值
             autofocus: Boolean, //是否开始获取焦点，input类型有效
             max: {
                 type: [Boolean, String, Number],
