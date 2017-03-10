@@ -78,6 +78,17 @@
 >type : Boolean, Array
 >>type为select可以用 option数组，格式[{text:xxx,value:xxx}]，也可以用slot
 
+#emit
+
+##on-focus
+>获取焦点时候回调，回调参数为当前值
+
+##on-blur
+>离开焦点时候回调，回调参数为当前值
+
+##v-model
+>绑定值
+
 # form-group
 ---
 >表单组 组件

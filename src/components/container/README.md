@@ -28,6 +28,14 @@
 >type : String
 >>动画类型in-out,out-in
 
+#emit
+
+##afterEnter
+>过度完成后回调
+
+##enter
+>过度开始时回调
+
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/App.vue</a>
 
