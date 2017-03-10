@@ -18,7 +18,7 @@
                 default: false
             },
             align: { //行中列宽度总和不足 6 时的对齐方式,'right', 'center', 'between', 'around'
-                type: [String, Boolean, String],
+                type: [String, Boolean],
                 default: false
             },
             bordered: Boolean //网格是否显示边框，边框可用于制作九宫格效果。
