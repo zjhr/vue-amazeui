@@ -8,6 +8,10 @@
         type: String,
         default: 'span'
       },
+      target: { //设置为 href 以后可以设置链接打开方式。
+        type: [Boolean, String],
+        default: false
+      },
       href: { //如果设置 href 属性将忽略 elm 属性，渲染为 <a>。
         type: [String, Boolean],
         default: false
@@ -22,7 +26,8 @@
     render(h) {
       return h(this.href ? 'a' : this.elm, {
         attrs: {
-          href: this.href
+          href: this.href,
+          target: this.target
         },
         class: [{
           'badge': true,
