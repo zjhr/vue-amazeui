@@ -1,6 +1,6 @@
 <template>
     <span rel="offcanvas">
-        <transition :name="offcanvasSilde" @enter="enter">
+        <transition :name="offcanvasSilde" @enter="enter" @after-leave="afterLeave">
         <div v-show="open" class="offcanvas" :style="objectStyle">
             <slot></slot>
         </div>
@@ -22,7 +22,7 @@
                 type: String,
                 default: 'left'
             },
-            sildewh: { //offcanvas的宽度，left,right为宽度,top,bottom为高度
+            sildewh: { //offcanvas的宽度，left,right为宽度,top,bottom为相对末端的距离
                 type: String,
                 default: '70%'
             }
