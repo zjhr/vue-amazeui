@@ -36,6 +36,14 @@
 ##enter
 >过度开始时回调
 
+#router-view
+#slot
+>自定义
+#slot.header
+>一般<navbar></navbar>
+#slot.tabbar
+>一般<tabbar></tabbar>
+
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/App.vue</a>
 

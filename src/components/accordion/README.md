@@ -16,6 +16,9 @@
 >type : Boolean
 >>是否关闭动画
 
+#slot
+><accordion-item></accordion-item>
+
 #accordionItem
 ---
 >风琴式菜单子类组件
@@ -32,8 +35,11 @@
 
 #emit
 
-#openAccordion
+##openAccordion
 >展开时候的回调，参数event
+
+#slot
+>自定义
 
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Accordion.vue</a>

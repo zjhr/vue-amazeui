@@ -48,6 +48,9 @@
 >type : Boolean,String
 >>渲染为a标签时候的打开链接类型
 
+#slot
+>自定义
+
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Badge.vue</a>
 

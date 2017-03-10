@@ -41,6 +41,11 @@
 >>'star-filled', 'star', 'stop', 'trash', 'up-nav',<br>
 >>'up', 'right-nav', 'right', 'down-nav', 'down', 'left-nav', 'left'<br>
 
+#emit
+
+##iconClick
+>icon点击回调
+
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Icon.vue</a>
 

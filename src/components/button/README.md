@@ -73,6 +73,9 @@
 ##buttonClick
 >按钮点击回调，参数event
 
+#slot
+>自定义
+
 #button-group
 ---
 >按钮组组件
@@ -126,6 +129,9 @@
 ##amSize
 >type : Boolean
 >>按钮组尺寸。可选值：,'xs','sm','lg','xl',不设置则显示默认尺寸。
+
+#slot
+><vue-button></vue-button>
 
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Button.vue</a>

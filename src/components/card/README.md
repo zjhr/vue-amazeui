@@ -12,6 +12,9 @@
 >type : String
 >>添加背景图链接
 
+#slot.header
+#slot.footer
+
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Card.vue</a>
 
