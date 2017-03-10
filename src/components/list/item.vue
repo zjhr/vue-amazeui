@@ -1,5 +1,5 @@
 <template>
-    <li class="item" :class="objectClass">
+    <li class="item" :class="objectClass" @click="listItemClickFun">
         <router-link v-if="href === '' || href" :to="href === '' || !href ? $route.path : href">
             <slot></slot>
         </router-link>
@@ -16,8 +16,12 @@
                 default: false
             },
             objectClass: Object
+        },
+        methods: {
+            listItemClickFun(e) {
+                this.$emit('listItemClick', e)
+            }
         }
-
     }
 
 </script>

@@ -32,6 +32,9 @@ export default {
                     innerHTML: value
                 } : {}
             }, isArray ? value : []) : ''
+        },
+        listItemClickFun(e){
+            this.$emit('listItemClick', e)
         }
     },
     render(h) {
@@ -60,6 +63,9 @@ export default {
             props: {
                 objectClass: objectClass,
                 href: this.href
+            },
+            on:{
+                listItemClick:this.listItemClickFun
             }
         }, [...children])
     },

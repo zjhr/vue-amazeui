@@ -1,6 +1,6 @@
 <template>
     <item-content :objectClass="objectClass" :href="href" :slotsImg="$slots.img" :subTitle="subTitle || $slots.subTitle" :desc="desc || $slots.desc"
-        :nested="nested">
+        :nested="nested" @listItemClick="listItemClickFun">
         <slot v-if="nested"></slot>
         <slot v-if="role"></slot>
         <h3 v-if="title" class="item-title">
@@ -33,6 +33,11 @@
                 type: [String, Boolean],
                 default: false
             }
+        },
+        methods:{
+          listItemClickFun(e){
+            this.$emit('listItemClick', e)
+          }  
         },
         computed: {
             objectClass() {
