@@ -6,7 +6,7 @@
 
 ##amStyle
 >type : String
->>微章的颜色，参数【blue，sblue，green，orange，red，black】
+>>颜色，参数【blue，sblue，green，orange，red，black】
 
 ##blue
 >type : Boolean
@@ -38,11 +38,15 @@
 
 ##elm
 >type : String
->>渲染标签，参数为正确的标签名
+>>渲染标签元素，默认span，参数为正确的标签名
 
 ##href
 >type : String
 >>渲染为a标签
+
+##target
+>type : Boolean,String
+>>渲染为a标签时候的打开链接类型
 
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Badge.vue</a>

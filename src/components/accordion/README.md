@@ -1,6 +1,6 @@
 # accordion
 ---
->风琴式菜单
+>风琴式菜单组件
 
 #prop
 
@@ -18,7 +18,7 @@
 
 #accordionItem
 ---
->风琴式菜单子类
+>风琴式菜单子类组件
 
 #prop
 
@@ -29,6 +29,11 @@
 ##active
 >type : Boolean
 >>是否展开当前的手风琴
+
+#emit
+
+#openAccordion
+>展开时候的回调，参数event
 
 #使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Accordion.vue</a>
