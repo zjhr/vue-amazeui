@@ -19,7 +19,7 @@
 #slot
 ><accordion-item></accordion-item>
 
-#accordionItem
+#accordion-item
 ---
 >风琴式菜单子类组件
 
