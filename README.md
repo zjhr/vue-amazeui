@@ -40,7 +40,7 @@ Vue.use(VueAmazeui)
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/vueSwitch">开关组件</a><br> 
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/vueview">子容器组件</a><br> 
 
-## 项目dome运行
+## 项目demo运行
 
 ``` bash
 # install dependencies
