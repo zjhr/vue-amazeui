@@ -2,37 +2,37 @@
 ---
 >工具栏组件父
 
-#prop
+# prop
 
-##amStyle
+## amStyle
 >type : String
 >>颜色，参数【blue，sblue，green，orange，red，black】
 
-##blue
+## blue
 >type : Boolean
 >>蓝色
 
-##sblue
+## sblue
 >type : Boolean
 >>浅蓝色
 
-##green
+## green
 >type : Boolean
 >>绿色
 
-##orange
+## orange
 >type : Boolean
 >>橙色
 
-##red
+## red
 >type : Boolean
 >>红色
 
-##black
+## black
 >type : Boolean
 >>黑色
 
-##noActive
+## noActive
 >type : Boolean
 >>取消选中效果
 
@@ -40,39 +40,39 @@
 ---
 >工具栏组件子
 
-#prop
+# prop
 
-##title
+## title
 >type : String
 >>文字
 
-##icon
+## icon
 >type : String
 >>图标名称
 
-##href
+## href
 >type : String, Boolean
 >>是否加链接
 
-##active
+## active
 >type : Boolean
 >>是否选中
 
-##badge
+## badge
 >type : Boolean, String, Number
 >>子项小徽章上显示的文字
 
-##badgeStyle
+## badgeStyle
 >type : String
 >>小徽章颜色样式，默认为 alert（red）
 
-#emit
+# emit
 
-##tabbarItemClick
+## tabbarItemClick
 >点击时候的回调
 
-#使用
+# 使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Tabbar.vue</a>
 
-#演示
+# 演示
 ><a>https://zjhr.github.io/vue-amazeui-demo/#/Tabbar</a>

@@ -2,42 +2,42 @@
 ---
 >导航条组件
 
-#prop
+# prop
 
-##amStyle
+## amStyle
 >type : String
 >>颜色，参数【blue，sblue，green，orange，red，black】
 
-##blue
+## blue
 >type : Boolean
 >>蓝色
 
-##sblue
+## sblue
 >type : Boolean
 >>浅蓝色
 
-##green
+## green
 >type : Boolean
 >>绿色
 
-##orange
+## orange
 >type : Boolean
 >>橙色
 
-##red
+## red
 >type : Boolean
 >>红色
 
-##black
+## black
 >type : Boolean
 >>黑色
 
-##titleOnLeft
+## titleOnLeft
 >type : Boolean
 >>主标题是否居左，默认居中。
 
-#使用
+# 使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Navbar.vue</a>
 
-#演示
+# 演示
 ><a>https://zjhr.github.io/vue-amazeui-demo/#/Navbar</a>

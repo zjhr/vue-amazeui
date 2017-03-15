@@ -2,9 +2,9 @@
 ---
 >常用样式 class 封装。
 
-#布局相关
+# 布局相关
 
-#.root
+# .root
 ``` bash
 .root {
   display: block;
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 ```
-#float
+# float
 ``` bash
 .cf: 清除浮动
 .fl: 向左浮动
@@ -22,7 +22,7 @@
 ```
 #边距
 
-##类名命名规则：
+## 类名命名规则：
 ``` bash
 .{type}[-(v|h|top|right|bottom|left)][-0|xs|sm|lg|xl]
 type：margin 或者 padding
@@ -45,18 +45,18 @@ padding-left-0: 左内边距为 0
 ```
 #文本
 
-##单行文字截断
+## 单行文字截断
 ``` bash
 .text-truncate: 需要添加 block 或 inline-block 样式。
 ```
-##文本对齐
+## 文本对齐
 ``` bash
 .text-left: 左对齐
 .text-center: 居中
 .text-right: 右对齐
 .text-justify: 两端对齐
 ```
-##文本颜色
+## 文本颜色
 ``` bash
 .text-primary
 .text-secondary

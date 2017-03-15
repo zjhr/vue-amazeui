@@ -2,57 +2,57 @@
 ---
 >徽章
 
-#prop
+# prop
 
-##amStyle
+## amStyle
 >type : String
 >>颜色，参数【blue，sblue，green，orange，red，black】
 
-##blue
+## blue
 >type : Boolean
 >>蓝色
 
-##sblue
+## sblue
 >type : Boolean
 >>浅蓝色
 
-##green
+## green
 >type : Boolean
 >>绿色
 
-##orange
+## orange
 >type : Boolean
 >>橙色
 
-##red
+## red
 >type : Boolean
 >>红色
 
-##black
+## black
 >type : Boolean
 >>黑色
 
-##rounded
+## rounded
 >type : Boolean
 >>渲染为圆角微章
 
-##elm
+## elm
 >type : String
 >>渲染标签元素，默认span，参数为正确的标签名
 
-##href
+## href
 >type : String
 >>渲染为a标签
 
-##target
+## target
 >type : Boolean,String
 >>渲染为a标签时候的打开链接类型
 
-#slot
+# slot
 >自定义
 
-#使用
+# 使用
 ><a>https://github.com/zjhr/vue-amazeui/blob/master/src/views/Badge.vue</a>
 
-#演示
+# 演示
 ><a>https://zjhr.github.io/vue-amazeui-demo/#/Badge</a>
