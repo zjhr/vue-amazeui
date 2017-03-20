@@ -17,7 +17,7 @@ import 'vue-amazeui/dist/static/css/vue-amazeui.css'
 Vue.use(VueAmazeui)
 ```
 
-##组件文档
+## 组件文档
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/accordion">风琴式组件</a><br> 
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/badge">微章组件</a><br> 
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/button">按钮组件</a><br> 
