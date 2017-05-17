@@ -116,8 +116,7 @@
         children[ItemActive].slide = children[ItemActiveNext].slide = slide
         children[ItemActiveNext][`${slideNode}Item`] = true
         setTimeout(() => {
-          children[ItemActive][`${slide}Item`] = true
-          children[ItemActiveNext][`${slide}Item`] = true
+          children[ItemActive][`${slide}Item`] = children[ItemActiveNext][`${slide}Item`] = true
         }, 100)
         if (!this.noPager) {
           this.items[ItemActive].active = false
