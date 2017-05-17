@@ -39,7 +39,8 @@ Vue.use(VueAmazeui)
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/tabs">选项卡组件</a><br> 
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/vueSwitch">开关组件</a><br> 
 ><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/vueview">子容器组件</a><br> 
-><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/utility">辅助类</a><br>
+><a href="https://github.com/zjhr/vue-amazeui/tree/master/src/components/utility">辅助类</a><br><br><br>
+><a href="https://zjhr.github.io/vue-amazeui-demo/">项目演示</a>
 
 ## 项目demo运行
 
